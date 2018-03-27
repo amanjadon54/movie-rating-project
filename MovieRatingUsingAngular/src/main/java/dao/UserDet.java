@@ -1,4 +1,6 @@
-package hibernateBeans;
+package dao;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +25,7 @@ public class UserDet {
 	@Column
 	private String email;
 	@Temporal(TemporalType.DATE)
-	private String joinDate;
+	private Date joinDate;
 	@Column
 	private String phoneNumber;
 	public int getUserId() {
@@ -50,10 +52,11 @@ public class UserDet {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getJoinDate() {
+	
+	public Date getJoinDate() {
 		return joinDate;
 	}
-	public void setJoinDate(String joinDate) {
+	public void setJoinDate(Date joinDate) {
 		this.joinDate = joinDate;
 	}
 	public String getPhoneNumber() {

@@ -28,7 +28,7 @@
                     <td>${user.phoneNumber}</td>
                     <td><a href="editUser?id=${user.userId}">Edit</a>
                              <a
-                        href="deleteEmployee?id=${user.userId}">Delete</a></td>
+                        href="deleteUser?id=${user.userId}">Delete</a></td>
  
                 </tr>
             </c:forEach>

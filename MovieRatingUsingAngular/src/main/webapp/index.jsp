@@ -6,7 +6,7 @@
 <title>New/Edit Contact</title>
 </head>
 <body>
-    <form action="run">
+    <form action="insert">
     	<input type="submit"/>
     </form>
 </body>
