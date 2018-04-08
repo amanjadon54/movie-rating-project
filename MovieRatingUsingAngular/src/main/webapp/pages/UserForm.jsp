@@ -11,7 +11,7 @@
         <h1>New/Edit Employee</h1>
         <form:form action="saveUser" method="post" modelAttribute="user">
         <table>
-            <form:hidden path="id"/>
+            <form:hidden path="userId"/>
             <tr>
                 <td>FirstName:</td>
                 <td><form:input path="firstName" /></td>

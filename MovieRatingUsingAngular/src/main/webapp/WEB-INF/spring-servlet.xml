@@ -19,7 +19,10 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
  
     <!-- Getting Database properties -->
     <context:property-placeholder location="classpath:application.properties" />
- 
+ 	
+ 	<!-- to include htmls and css files store in resources under web app -->
+ 	<mvc:resources mapping="/resources/**" location="/resources/" />
+ 	
     <mvc:annotation-driven />
  
     <!-- Specifying the Resource location to load JS, CSS, Images etc -->
@@ -63,6 +66,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     
     <bean id="hibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">  
     <property name="sessionFactory" ref="sessionFactory"></property>
+   	<property name="checkWriteOperations" value="false"/>  
     </bean> 
  	
  	
@@ -87,4 +91,6 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 	</aop:config>
  
     <tx:annotation-driven/>
+    
+    
 </beans>

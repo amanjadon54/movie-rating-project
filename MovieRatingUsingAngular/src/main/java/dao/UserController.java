@@ -66,6 +66,7 @@ public class UserController {
     @RequestMapping(value = "/editUser", method = RequestMethod.GET)
     public ModelAndView editUser(HttpServletRequest request) {
         int userId = Integer.parseInt(request.getParameter("id"));
+        System.out.println("trying to edit record with useriud : "+ userId);
         UserDet user =userDetailsImpl.getUser(userId);
         ModelAndView model = new ModelAndView("UserForm");
         model.addObject("user", user);
